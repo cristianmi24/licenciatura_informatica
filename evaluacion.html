@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoevaluación - Licenciatura en Informática</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="img/logo1.png" alt="Logo Licenciatura en Informática">
+                <span>LIC.INFORMÁTICA</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#sobre-carrera">Sobre la Carrera</a>
+                <a href="index.html#proyectos">Proyectos</a>
+                <a href="index.html#profesores">Profesores</a>
+                <a href="index.html#malla-curricular">Malla Curricular</a>
+                <a href="index.html#testimonios">Testimonios</a>
+                <a href="index.html#contacto">Contacto</a>
+                <a href="evaluacion.html" class="active">Autoevaluación</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección de Autoevaluación -->
+    <section class="section autoevaluacion-section">
+        <div class="container">
+            <h2 class="section-title">Autoevaluación</h2>
+            <div class="autoevaluacion-content">
+                <div class="autoevaluacion-intro">
+                    <p>Esta autoevaluación está diseñada para ayudarte a identificar tus fortalezas y áreas de interés en relación con la Licenciatura en Informática.</p>
+                    <p>No hay respuestas correctas o incorrectas. Simplemente selecciona la opción que mejor refleje tu forma de pensar y actuar.</p>
+                </div>
+                <div id="questions-container"></div>
+                <div class="autoevaluacion-navigation">
+                    <button id="prev-btn" class="btn btn-secondary">Anterior</button>
+                    <button id="next-btn" class="btn btn-primary">Siguiente</button>
+                    <button id="submit-btn" class="btn btn-success" style="display: none;">Ver Resultados</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner de Resultados -->
+    <div id="resultados-banner" class="resultados-banner" style="display: none;">
+        <div class="container">
+            <div class="resultados-content">
+                <div class="resultados-header">
+                    <h3 id="resultado-titulo"></h3>
+                    <div class="resultados-actions">
+                        <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+                        <button class="close-banner">&times;</button>
+                    </div>
+                </div>
+                <div class="resultados-body">
+                    <div class="resultados-text">
+                        <p id="resultado-descripcion"></p>
+                    </div>
+                    <div class="areas-fortaleza">
+                        <h4>Áreas de Fortaleza</h4>
+                        <ul id="areas-fortaleza-list"></ul>
+                    </div>
+                    <div class="recomendaciones">
+                        <h4>Recomendaciones</h4>
+                        <ul id="recomendaciones-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Licenciatura en Informática</h3>
+                    <p>Formando profesionales capaces de transformar el mundo a través de la tecnología desde 1996.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html#inicio">Inicio</a></li>
+                        <li class="footer-link"><a href="index.html#sobre-carrera">Sobre la Carrera</a></li>
+                        <li class="footer-link"><a href="index.html#proyectos">Proyectos</a></li>
+                        <li class="footer-link"><a href="index.html#profesores">Profesores</a></li>
+                        <li class="footer-link"><a href="index.html#malla-curricular">Malla Curricular</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Universidad 3000, Ciudad Universitaria</p>
+                    <p><i class="fas fa-phone"></i> +52 (55) 5622-1234</p>
+                    <p><i class="fas fa-envelope"></i> informatica@universidad.edu</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Licenciatura en Informática. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licenciatura en Informática - La carrera que lo tiene todo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Modal de Video -->
+    <div id="video-modal" class="video-modal">
+        <div class="video-modal-content">
+            <span id="close-video-modal" class="close-video-modal">&times;</span>
+            <video id="promo-video" controls>
+                <source src="videos/202506150800.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+
+    <!-- Header y Navegación -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="img/logo1.png" alt="Logo Licenciatura en Informática">
+                <span>LIC.INFORMÁTICA</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <a href="#inicio" class="active">Inicio</a>
+                <a href="#sobre-carrera">Sobre la Carrera</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#profesores">Profesores</a>
+                <a href="#malla-curricular">Malla Curricular</a>
+                <a href="#testimonios">Testimonios</a>
+                <a href="#contacto">Contacto</a>
+                <a href="evaluacion.html">Autoevaluación</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner de Invitación a Autoevaluación -->
+    <div id="invitacion-banner" class="invitacion-banner">
+        <button class="close-invitacion" aria-label="Cerrar banner"></button>
+        <div class="invitacion-content">
+            <div class="invitacion-image">
+                <img src="img/Fondobanner .jpeg" alt="Descubre tu perfil en la Licenciatura en Informática">
+            </div>
+            <div class="invitacion-text">
+                <h2>¡Descubre tu perfil en la Licenciatura en Informática!</h2>
+                <p>Realiza nuestra autoevaluación y descubre si tienes el perfil ideal para esta carrera. Identifica tus fortalezas y áreas de interés en relación con el programa.</p>
+                <a href="evaluacion.html" class="btn btn-primary">Comenzar Autoevaluación</a>
+            </div>
+        </div>
+        <div class="dont-show-again">
+            <input type="checkbox" id="dontShowAgain">
+            <label for="dontShowAgain">No mostrar más</label>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero" style="background-image: url('img/hero-background.png');">
+        <div class="container hero-content">
+            <div class="video-container">
+                <video id="hero-video" autoplay loop playsinline muted>
+                    <source src="videos/202506150800.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <div class="video-controls">
+                    <button id="play-pause-button" class="control-button">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                    </div>
+                    <button id="mute-button" class="control-button">
+                        <i class="fas fa-volume-mute"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre la Carrera -->
+    <section id="sobre-carrera" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre la Carrera</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Desde su creación en el año <strong>1996</strong>, la <strong>Licenciatura en Informática de la Universidad de Córdoba</strong> ha sido pionera en el Caribe colombiano en formar profesionales capaces de integrar la informática y la pedagogía como una herramienta de cambio en la educación y la sociedad. Este programa nació en respuesta a las necesidades de una región que exigía innovación, inclusión y transformación educativa mediante las tecnologías.</p>
+                    
+                    <h3>🧠 <strong>Un modelo pedagógico centrado en el estudiante</strong></h3>
+                    <p>La carrera se fundamenta en el <strong>modelo pedagógico constructivista</strong>, que reconoce al estudiante como protagonista de su propio aprendizaje. Aquí, cada clase es un espacio para descubrir, experimentar y crear. No se trata solo de recibir conocimientos, sino de <strong>construir saberes significativos</strong>, vinculados a los contextos reales donde los futuros licenciados ejercerán su labor educativa.</p>
+                    <p>Además, el programa promueve una formación <strong>crítica, ética y transformadora</strong>, donde el licenciado en informática es un agente activo del cambio social, cultural y educativo en su entorno.</p>
+                    
+                    
+                    <h3>📚 <strong>Historia de compromiso y evolución</strong></h3>
+                    <p>A lo largo de más de dos décadas, la Licenciatura en Informática ha consolidado su identidad como un programa comprometido con la <strong>calidad académica</strong>, el <strong>impacto social</strong> y la <strong>inclusión educativa</strong>. Ha graduado a cientos de profesionales que hoy lideran procesos pedagógicos y tecnológicos en instituciones educativas, empresas, ONGs y entidades del sector público.</p>
+                    <p>Con la constante actualización curricular y el fortalecimiento de sus prácticas académicas, la carrera responde a los desafíos de una educación mediada por tecnologías, donde el aprendizaje se da en múltiples escenarios: aulas, plataformas, comunidades y laboratorios digitales.</p>
+                    
+                    <h3>🎓 <strong>¿Por qué estudiar Licenciatura en Informática en la Unicórdoba?</strong></h3>
+                    <ul>
+                        <li>Porque te formas en una universidad pública, <strong>acreditada en alta calidad</strong>, con un enfoque social.</li>
+                        <li>Porque aprenderás a usar la tecnología <strong>no solo como herramienta</strong>, sino como medio para <strong>enseñar, motivar e incluir</strong>.</li>
+                        <li>Porque desde Montería, estás conectado al mundo.</li>
+                        <li>Porque tu formación te prepara para ser <strong>docente, desarrollador, investigador y líder educativo.</strong></li>
+                    </ul>
+                    
+                    <div style="background: rgba(0,0,0,0.1); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                        <h4>📍 Universidad de Córdoba – Facultad de Educación y Ciencias Humanas</h4>
+                        <p><strong>Programa:</strong> Licenciatura en Informática</p>
+                        <p>📅 <strong>Modalidad:</strong> Presencial | 🏫 <strong>Duración:</strong> 10 semestres</p>
+                        <p>�� <strong>Título que otorga:</strong> Licenciado/a en Informática</p>
+                        <p>🗓 <strong>Año de creación:</strong> 1996</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="img/personas-que-trabajan-hasta-tarde-en-su-oficina.jpg" alt="Estudiantes de informática trabajando en un proyecto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/project1.jpg" alt="Sistema de Gestión Hospitalaria">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema de Gestión Hospitalaria</h3>
+                        <p class="project-description">Plataforma integral para la administración de recursos médicos, pacientes y personal sanitario, desarrollada con tecnologías web modernas.</p>
+                        <a href="#" class="btn btn-outline">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/project2.jpg" alt="Aplicación de Inteligencia Artificial">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Asistente Virtual Educativo</h3>
+                        <p class="project-description">Sistema de tutoría personalizada basado en IA que adapta contenidos educativos según el perfil de aprendizaje de cada estudiante.</p>
+                        <a href="#" class="btn btn-outline">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/project3.jpg" alt="Plataforma de Análisis de Datos">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Plataforma de Análisis Predictivo</h3>
+                        <p class="project-description">Herramienta de visualización y análisis de datos para predecir tendencias de mercado y comportamiento de consumidores.</p>
+                        <a href="#" class="btn btn-outline">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/project4.jpg" alt="Videojuego Educativo">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Videojuego Educativo</h3>
+                        <p class="project-description">Juego inmersivo que combina entretenimiento con aprendizaje de conceptos científicos, desarrollado con motores gráficos avanzados.</p>
+                        <a href="#" class="btn btn-outline">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/project5.jpg" alt="Sistema de Seguridad IoT">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistema de Seguridad IoT</h3>
+                        <p class="project-description">Red de dispositivos inteligentes para monitoreo y protección de espacios, con alertas en tiempo real y análisis de patrones.</p>
+                        <a href="#" class="btn btn-outline">Ver detalles</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/project6.jpg" alt="Aplicación de Realidad Aumentada">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Experiencia de Realidad Aumentada</h3>
+                        <p class="project-description">Aplicación que enriquece entornos físicos con elementos virtuales interactivos para experiencias educativas y turísticas.</p>
+                        <a href="#" class="btn btn-outline">Ver detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Profesores -->
+    <section id="profesores" class="professors">
+        <div class="container">
+            <h2 class="section-title">Profesores Destacados</h2>
+            <div class="professors-grid">
+                <div class="professor-card">
+                    <div class="professor-image">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHXYLM__g3Mqg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1677090533027?e=1755734400&v=beta&t=V0gAMSEDSSrj8rYkh4EJWQ6iXoHS5YB5_FvZUu_qW6U" alt="Dr. Alejandro Ramírez">
+                    </div>
+                    <div class="professor-content">
+                        <h3 class="professor-name">Víctor Fabián Castro Pérez</h3>
+                        <p class="professor-specialty"> Information System Engineer |• Master of Arts in Online Education |• Master in Software Development |• Problem Solver Fan</p>
+                        <p class="professor-bio"> Ingeniero de Sistemas, con gran experiencia en areas relacionadas con Desarrollo de aplicaciones • Desarrollo de Android • Desarrollo web • Redacción técnica
+                        </p>
+                    </div>
+                </div>
+                <div class="professor-card">
+                    <div class="professor-image">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQFelMFkU6FEGw/profile-displayphoto-shrink_800_800/B4EZO4yQaJHkAc-/0/1733972002922?e=1755734400&v=beta&t=Ydi4atdt-AC441I6GC7SpsUG7PHTZDfAYzGF_e5LTCc" alt="Dra. Sofía Mendoza">
+                    </div>
+                    <div class="professor-content">
+                        <h3 class="professor-name">Manuel Fernando Caro</h3>
+                        <p class="professor-specialty">AI Researcher - Professor Cognitive Systems in Education</p>
+                        <p class="professor-bio">Professor of Educational informatics in the Department of Informatics, University of Córdoba Colombia
+
+                            Software Engineering Specialist and Master of Information Technology applied to education.
+                            
+                            Coordinator of the Research Group on Cognitive Informatics and Cognitive Computing -> Department of Informatics - University of Córdoba - Colombia
+                            
+                            Areas of interest: Metacognition in Computation, Design of educational software and knowledge management in education.
+                            
+                            PhD in Engineering from the National University of Colombia.</p>
+                    </div>
+                </div>
+                <div class="professor-card">
+                    <div class="professor-image">
+                        <img src="https://media.licdn.com/dms/image/v2/C4E03AQEaOTDLz3YSRQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659998731986?e=1755734400&v=beta&t=AWCdNqfKlhFkEgbEVOB0wA7M38ci0Yj9HmMRAbvZsKA" alt="Dr. Carlos Vega">
+                    </div>
+                    <div class="professor-content">
+                        <h3 class="professor-name">Juan Carlos Giraldo Cardozo</h3>
+                        <p class="professor-specialty">Coordinador del Área de Programación y Sistemas - Informática
+                            Coordinador del Semillero de Investigación AVI: Ambientes Virtuales Interactivos
+                            Miembro del Grupo de Investigación CI&CC: Cognitive Informatic And Cognitive Computer</p>
+                        <p class="professor-bio">Highly qualified professional with extensive experience in the design and development of multimedia software and intelligent educational video games in the line of cognitive learning analytics.
+
+                            He has promoted Research in Córdoba as part of the Colombian Network of Research Seedbeds Córdoba Node and on two occasions won third place in the national award for Educational Computing by RibieCol in the categories of Educational Software Research and Development.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+   <!-- Malla Curricular -->
+    <section id="malla-curricular" class="curriculum">
+        <div class="container">
+            <h2 class="section-title">Malla Curricular</h2>
+            <div class="semesters-container">
+                <!-- Semestre 1 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 1</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="competencias-comunicativas">Competencias Comunicativas</li>
+                        <li class="subject-item" data-subject="mediaciones-tecnologicas-1">Mediaciones Tecnológicas</li>
+                        <li class="subject-item" data-subject="matematica-logica">Matemáticas y Lógica</li>
+                        <li class="subject-item" data-subject="epistemologia-comunicacion">Epistemología de la Comunicación</li>
+                        <li class="subject-item" data-subject="psicologia-evolutiva">Psicología Evolutiva</li>
+                        <li class="subject-item" data-subject="epistemologia-tecnologia">Epistemología de la Tecnología</li>
+                    </ul>
+                </div>
+                
+                <!-- Semestre 2 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 2</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="educacion-ciudadania">Educación para la Ciudadanía</li>
+                        <li class="subject-item" data-subject="lectura-escritura-critica">Lectura y Escritura Crítica</li>
+                        <li class="subject-item" data-subject="liderazgo-gestion">Liderazgo y Gestión</li>
+                        <li class="subject-item" data-subject="razonamiento-cuantitativo">Razonamiento Cuantitativo</li>
+                        <li class="subject-item" data-subject="teoria-imagen">Teoría de la Imagen</li>
+                        <li class="subject-item" data-subject="psicologia-aprendizaje">Psicología del Aprendizaje</li>
+                        <li class="subject-item" data-subject="educacion-tecnologica">Educación Tecnológica</li>
+                    </ul>
+                </div>
+                
+                <!-- Semestre 3 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 3</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="ingles-1">Inglés I</li>
+                        <li class="subject-item" data-subject="electiva-libre-1">Electiva Libre I</li>
+                        <li class="subject-item" data-subject="fundamentos-algoritmia">Fundamentos de Algoritmia</li>
+                        <li class="subject-item" data-subject="fotografia">Fotografía</li>
+                        <li class="subject-item" data-subject="sociologia-educacion">Sociología de la Educación</li>
+                        <li class="subject-item" data-subject="pra-ped-inv-1">Práctica Pedagógica Investigativa I</li>
+                        <li class="subject-item" data-subject="informatica-educacion">Informática y Educación</li>
+                    </ul>
+                </div>
+                
+                <!-- Semestre 4 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 4</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="ingles-2">Inglés II</li>
+                        <li class="subject-item" data-subject="electiva-libre-2">Electiva Libre II</li>
+                        <li class="subject-item" data-subject="gerencia-educacion">Gerencia de la Educación</li>
+                        <li class="subject-item" data-subject="fundamentos-programacion">Fundamentos de Programación</li>
+                        <li class="subject-item" data-subject="narrativa-guionistica">Narrativa y Guionística</li>
+                        <li class="subject-item" data-subject="tendencias-pedagogicas">Tendencias Pedagógicas y Didácticas</li>
+                        <li class="subject-item" data-subject="pra-ped-inv-2">Práctica Pedagógica Investigativa II</li>
+                        <li class="subject-item" data-subject="cognicion-computacion">Cognición y Computación</li>
+                    </ul>
+                </div>
+                
+                <!-- Semestre 5 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 5</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="ingles-3">Inglés III</li>
+                        <li class="subject-item" data-subject="didactica-general">Didáctica General</li>
+                        <li class="subject-item" data-subject="planificacion-estrategica">Planificación Estratégica</li>
+                        <li class="subject-item" data-subject="tecnicas-programacion">Técnicas Avanzadas de Programación</li>
+                        <li class="subject-item" data-subject="radio">Radio</li>
+                        <li class="subject-item" data-subject="curriculo-gestion">Currículo y Gestión Escolar</li>
+                        <li class="subject-item" data-subject="pra-ped-inv-3">Práctica Pedagógica Investigativa III</li>
+                        <li class="subject-item" data-subject="inteligencia-computacional">Inteligencia Computacional</li>
+                    </ul>
+                </div>
+                
+                <!-- Semestre 6 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 6</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="ingles-4">Inglés IV</li>
+                        <li class="subject-item" data-subject="didactica-informatica">Didáctica de la Informática</li>
+                        <li class="subject-item" data-subject="redes-computadores">Redes de Computadores</li>
+                        <li class="subject-item" data-subject="teoria-metodos-investigacion">Teoría y Métodos de Investigación</li>
+                        <li class="subject-item" data-subject="procesos-evaluativos">Procesos Evaluativos</li>
+                        <li class="subject-item" data-subject="pra-ped-inv-4">Práctica Pedagógica Investigativa IV</li>
+                        <li class="subject-item" data-subject="produccion-artefactos">Producción de Artefactos Tecnológicos</li>
+                    </ul>
+                </div>
+                
+                <!-- Semestre 7 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 7</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="didactica-medios">Didáctica de los Medios Audiovisuales</li>
+                        <li class="subject-item" data-subject="electiva-carrera-1">Electiva de Carrera I</li>
+                        <li class="subject-item" data-subject="planeacion-proyectos">Planeación de Proyectos de Investigación</li>
+                        <li class="subject-item" data-subject="produccion-multimedia">Producción Multimedia</li>
+                        <li class="subject-item" data-subject="politicas-publicas">Políticas Públicas e Identidad Docente</li>
+                        <li class="subject-item" data-subject="pra-ped-inv-5">Práctica Pedagógica Investigativa V</li>
+                        <li class="subject-item" data-subject="robotica-basica">Robótica Básica</li>
+                    </ul>
+                </div>
+                
+                <!-- Semestre 8 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 8</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="gestion-proyectos">Gestión de Proyectos Educativos</li>
+                        <li class="subject-item" data-subject="diseño-software-1">Diseño y Desarrollo de Software Educativo I</li>
+                        <li class="subject-item" data-subject="diseño-intervencion">Diseño de la Intervención Pedagógica</li>
+                        <li class="subject-item" data-subject="realizacion-audiovisual-1">Realización Audiovisual I</li>
+                        <li class="subject-item" data-subject="pra-ped-inv-6">Práctica Pedagógica Investigativa VI</li>
+                        <li class="subject-item" data-subject="ambientes-educativos">Ambientes Educativos Tecnológicos</li>
+                    </ul>
+                </div>
+                
+                <!-- Semestre 9 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 9</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="electiva-carrera-2">Electiva de Carrera II</li>
+                        <li class="subject-item" data-subject="diseño-software-2">Diseño y Desarrollo de Software Educativo II</li>
+                        <li class="subject-item" data-subject="aplicacion-validacion">Aplicación y Validación de la Intervención Pedagógica</li>
+                        <li class="subject-item" data-subject="realizacion-audiovisual-2">Realización Audiovisual II</li>
+                        <li class="subject-item" data-subject="practica-docente-1">Práctica Docente I</li>
+                    </ul>
+                </div>
+                
+                <!-- Semestre 10 -->
+                <div class="semester">
+                    <h3 class="semester-title">Semestre 10</h3>
+                    <ul class="subjects-list">
+                        <li class="subject-item" data-subject="requisito-grado">Requisito de Grado</li>
+                        <li class="subject-item" data-subject="electiva-carrera-3">Electiva de Carrera III</li>
+                        <li class="subject-item" data-subject="diseño-software-3">Diseño y Desarrollo de Software Educativo III</li>
+                        <li class="subject-item" data-subject="informe-final">Elaboración y Sustentación de Informe Final</li>
+                        <li class="subject-item" data-subject="practica-docente-2">Práctica Docente II</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para detalles de materia -->
+    <div class="modal" id="subject-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Nombre de la Materia</h3>
+                <button class="close-modal" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-image" src="" alt="Imagen representativa de la materia">
+                </div>
+                <div class="modal-text">
+                    <p id="modal-description">Descripción de la materia</p>
+                    <div id="modal-details">
+                        <p><strong>Créditos:</strong> <span id="modal-credits">0</span></p>
+                        <p><strong>Horas semanales:</strong> <span id="modal-hours">0</span></p>
+                        <p><strong>Prerrequisitos:</strong> <span id="modal-prerequisites">Ninguno</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros estudiantes</h2>
+            <div class="testimonials-slider">
+                <div class="testimonials-container" id="testimonials-container">
+                    <div class="testimonial">
+                        <div class="testimonial-image">
+                            <img src="img/testimonial1.jpg" alt="Ana García">
+                        </div>
+                        <p class="testimonial-text">La Licenciatura en Informática me dio las herramientas para desarrollarme profesionalmente en un campo que evoluciona constantemente. Los profesores son excelentes y el enfoque práctico me permitió conseguir trabajo incluso antes de graduarme.</p>
+                        <p class="testimonial-author">Ana García</p>
+                        <p class="testimonial-role">Egresada 2023, Desarrolladora Senior en TechCorp</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-image">
+                            <img src="img/testimonial2.jpg" alt="Miguel Hernández">
+                        </div>
+                        <p class="testimonial-text">Lo que más valoro de esta carrera es su versatilidad. Aprendí desde programación hasta diseño de experiencias digitales, lo que me ha permitido adaptarme a diferentes roles en la industria tecnológica.</p>
+                        <p class="testimonial-author">Miguel Hernández</p>
+                        <p class="testimonial-role">Egresado 2022, Fundador de StartupTech</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-image">
+                            <img src="img/testimonial3.jpg" alt="Lucía Martínez">
+                        </div>
+                        <p class="testimonial-text">Elegí esta carrera porque combina creatividad y tecnología. Los proyectos prácticos y el enfoque en inteligencia artificial me abrieron puertas en una industria que está transformando el mundo.</p>
+                        <p class="testimonial-author">Lucía Martínez</p>
+                        <p class="testimonial-role">Estudiante de 8vo semestre, Pasante en IA Labs</p>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prev-testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn" id="next-testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Nombre completo</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea id="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn">Enviar mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Licenciatura en Informática</h3>
+                    <p>Formando profesionales capaces de transformar el mundo a través de la tecnología desde 1996.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#inicio">Inicio</a></li>
+                        <li class="footer-link"><a href="#sobre-carrera">Sobre la Carrera</a></li>
+                        <li class="footer-link"><a href="#proyectos">Proyectos</a></li>
+                        <li class="footer-link"><a href="#profesores">Profesores</a></li>
+                        <li class="footer-link"><a href="#malla-curricular">Malla Curricular</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Universidad 3000, Ciudad Universitaria</p>
+                    <p><i class="fas fa-phone"></i> +52 (55) 5622-1234</p>
+                    <p><i class="fas fa-envelope"></i> informatica@universidad.edu</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Licenciatura en Informática. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chat-container">
+        <button id="chat-button" class="chat-button">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div id="chat-window" class="chat-window">
+            <div class="chat-header">
+                <h3>Asistente Virtual</h3>
+                <button id="close-chat" class="close-button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="chat-messages" class="chat-messages">
+                <!-- Los mensajes se agregarán aquí dinámicamente -->
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+                <button id="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Autoevaluación -->
+    <div id="autoevaluacion-modal" class="modal">
+        <div class="modal-content autoevaluacion-content">
+            <div class="modal-header">
+                <h3>¡Bienvenido a la Licenciatura en Informática!</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="autoevaluacion-intro">
+                    <p>Antes de comenzar, te invitamos a realizar una breve autoevaluación que te ayudará a identificar tus fortalezas y áreas de interés en relación con la carrera.</p>
+                    <p>Esta autoevaluación es opcional y puedes cerrarla en cualquier momento. Si deseas realizarla más tarde, encontrarás el botón "Autoevaluación" en el menú de navegación.</p>
+                </div>
+                <div id="questions-container"></div>
+                <div class="autoevaluacion-navigation">
+                    <button id="prev-btn" class="btn btn-secondary">Anterior</button>
+                    <button id="next-btn" class="btn btn-primary">Siguiente</button>
+                    <button id="submit-btn" class="btn btn-success" style="display: none;">Ver Resultados</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Resultados -->
+    <div id="resultados-modal" class="modal">
+        <div class="modal-content resultados-content">
+            <div class="modal-header">
+                <h3 id="resultado-titulo"></h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="resultados-text">
+                    <p id="resultado-descripcion"></p>
+                </div>
+                <div class="areas-fortaleza">
+                    <h4>Áreas de Fortaleza</h4>
+                    <ul id="areas-fortaleza-list"></ul>
+                </div>
+                <div class="recomendaciones">
+                    <h4>Recomendaciones</h4>
+                    <ul id="recomendaciones-list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

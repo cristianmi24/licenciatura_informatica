@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoevaluación - Licenciatura en Informática</title>
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <link rel="stylesheet" href="../css/autoevaluacion.css">
+</head>
+<body>
+    <div class="menu-container">
+        <ul class="menu-list">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../perfil.html">Perfil Profesional</a></li>
+            <li><a href="../objetivos.html">Objetivos</a></li>
+            <li><a href="autoevaluacion.html">Autoevaluación</a></li>
+        </ul>
+    </div>
+
+    <div class="autoevaluacion-container">
+        <h1 class="autoevaluacion-title">Autoevaluación</h1>
+        <div class="autoevaluacion-form">
+            <form id="autoevaluacionForm">
+                <!-- Pregunta 1 -->
+                <div class="pregunta-container">
+                    <div class="pregunta-texto">
+                        1. ¿Te interesa la programación y el desarrollo de software?
+                    </div>
+                    <div class="opciones-container">
+                        <div class="opcion-item">
+                            <input type="radio" id="p1_op1" name="pregunta1" value="1" required>
+                            <label for="p1_op1">Sí, me interesa mucho</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p1_op2" name="pregunta1" value="2">
+                            <label for="p1_op2">Me interesa moderadamente</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p1_op3" name="pregunta1" value="3">
+                            <label for="p1_op3">No me interesa mucho</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="pregunta-container">
+                    <div class="pregunta-texto">
+                        2. ¿Te gusta resolver problemas y buscar soluciones creativas?
+                    </div>
+                    <div class="opciones-container">
+                        <div class="opcion-item">
+                            <input type="radio" id="p2_op1" name="pregunta2" value="1" required>
+                            <label for="p2_op1">Sí, disfruto resolviendo problemas</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p2_op2" name="pregunta2" value="2">
+                            <label for="p2_op2">A veces me gusta</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p2_op3" name="pregunta2" value="3">
+                            <label for="p2_op3">No me gusta mucho</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="pregunta-container">
+                    <div class="pregunta-texto">
+                        3. ¿Tienes facilidad para las matemáticas y el pensamiento lógico?
+                    </div>
+                    <div class="opciones-container">
+                        <div class="opcion-item">
+                            <input type="radio" id="p3_op1" name="pregunta3" value="1" required>
+                            <label for="p3_op1">Sí, tengo buena facilidad</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p3_op2" name="pregunta3" value="2">
+                            <label for="p3_op2">Tengo una facilidad moderada</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p3_op3" name="pregunta3" value="3">
+                            <label for="p3_op3">Me cuesta trabajo</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="pregunta-container">
+                    <div class="pregunta-texto">
+                        4. ¿Te gusta trabajar en equipo y colaborar con otros?
+                    </div>
+                    <div class="opciones-container">
+                        <div class="opcion-item">
+                            <input type="radio" id="p4_op1" name="pregunta4" value="1" required>
+                            <label for="p4_op1">Sí, disfruto el trabajo en equipo</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p4_op2" name="pregunta4" value="2">
+                            <label for="p4_op2">A veces me gusta</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p4_op3" name="pregunta4" value="3">
+                            <label for="p4_op3">Prefiero trabajar solo</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div class="pregunta-container">
+                    <div class="pregunta-texto">
+                        5. ¿Te interesa aprender constantemente sobre nuevas tecnologías?
+                    </div>
+                    <div class="opciones-container">
+                        <div class="opcion-item">
+                            <input type="radio" id="p5_op1" name="pregunta5" value="1" required>
+                            <label for="p5_op1">Sí, me gusta estar actualizado</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p5_op2" name="pregunta5" value="2">
+                            <label for="p5_op2">Me interesa moderadamente</label>
+                        </div>
+                        <div class="opcion-item">
+                            <input type="radio" id="p5_op3" name="pregunta5" value="3">
+                            <label for="p5_op3">No me interesa mucho</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">Enviar Autoevaluación</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/autoevaluacion.js"></script>
+</body>
+</html> 
