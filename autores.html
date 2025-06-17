@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licenciatura en Informática - La carrera que lo tiene todo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .credits-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .credits-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 3rem auto 2rem auto;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .person-card {
+            background: rgba(255,255,255,0.97);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            text-align: center;
+            width: 320px;
+            max-width: 90vw;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .person-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 1.2rem;
+            border: 3px solid #5dade2;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .person-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .name {
+            color: #222f3e;
+            font-size: 1.18rem;
+            font-weight: 700;
+            margin: 0 0 0.3rem 0;
+            letter-spacing: 0.5px;
+        }
+
+        .role {
+            color: #2980b9;
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 0 0 0.7rem 0;
+        }
+
+        .description {
+            color: #636e72;
+            font-size: 0.97rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 900px) {
+            .credits-grid {
+                gap: 1.2rem;
+            }
+            .person-card {
+                width: 90vw;
+                max-width: 340px;
+            }
+        }
+        @media (max-width: 600px) {
+            .credits-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .person-card {
+                width: 95vw;
+                max-width: 350px;
+            }
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+        }
+
+        .avatar-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .avatar-info {
+            margin-top: 1rem;
+        }
+
+        .avatar-info h3 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 1.2rem;
+        }
+
+        .avatar-info p {
+            margin: 0.5rem 0 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+    </style>
+     
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <img src="img/logo1.png" alt="Logo Licenciatura en Informática">
+                <span>LIC.INFORMÁTICA</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <a href="index.html#inicio">Inicio</a>
+                <a href="index.html#sobre-carrera">Sobre la Carrera</a>
+                <a href="autores.html">Autores</a>
+                <a href="index.html#contacto">Contacto</a>
+                <a href="evaluacion.html" class="active">Autoevaluación</a>
+            </nav>
+        </div>
+    </header>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Créditos del Proyecto</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap');
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: 'Exo 2', sans-serif;
+                background: #000;
+                min-height: 100vh;
+                overflow-x: hidden;
+                position: relative;
+            }
+    
+            /* Fondo animado con partículas */
+            .bg-animation {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: radial-gradient(circle at 25% 25%, #0066ff 0%, transparent 50%),
+                            radial-gradient(circle at 75% 75%, #0099ff 0%, transparent 50%),
+                            radial-gradient(circle at 50% 50%, #00ccff 0%, transparent 50%),
+                            linear-gradient(45deg, #000814, #001d3d, #003566);
+                animation: bgShift 8s ease-in-out infinite alternate;
+                z-index: -2;
+            }
+    
+            @keyframes bgShift {
+                0% { filter: hue-rotate(0deg) brightness(1); }
+                100% { filter: hue-rotate(45deg) brightness(1.2); }
+            }
+    
+            /* Partículas flotantes */
+            .particles {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: -1;
+            }
+    
+            .particle {
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background: #fff;
+                border-radius: 50%;
+                opacity: 0.8;
+                animation: float 15s infinite linear;
+            }
+    
+            @keyframes float {
+                0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
+                10% { opacity: 1; }
+                90% { opacity: 1; }
+                100% { transform: translateY(-100vh) translateX(100px) rotate(360deg); opacity: 0; }
+            }
+    
+            .main-container {
+                position: relative;
+                z-index: 1;
+                padding: 20px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            /* TÍTULO SÚPER IMPRESIONANTE */
+            .title-container {
+                perspective: 1000px;
+                margin-bottom: 80px;
+                position: relative;
+            }
+    
+            .mega-title {
+                font-family: 'Orbitron', monospace;
+                font-size: clamp(3rem, 8vw, 8rem);
+                font-weight: 900;
+                text-align: center;
+                background: linear-gradient(45deg, 
+                    #0066ff, #0099ff, #00ccff, #66d9ff, #b3ecff, #0066ff);
+                background-size: 400% 400%;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                animation: gradientShift 3s ease-in-out infinite,
+                           titlePulse 2s ease-in-out infinite alternate,
+                           titleFloat 6s ease-in-out infinite;
+                text-shadow: 0 0 50px rgba(0, 102, 255, 0.6),
+                             0 0 100px rgba(0, 153, 255, 0.4);
+                position: relative;
+                transform-style: preserve-3d;
+                letter-spacing: 0.1em;
+            }
+    
+            @keyframes gradientShift {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+    
+            @keyframes titlePulse {
+                0% { transform: scale(1) rotateX(0deg); }
+                100% { transform: scale(1.05) rotateX(5deg); }
+            }
+    
+            @keyframes titleFloat {
+                0%, 100% { transform: translateY(0px) rotateY(0deg); }
+                50% { transform: translateY(-20px) rotateY(5deg); }
+            }
+    
+            /* Efecto de brillo detrás del título */
+            .title-glow {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 120%;
+                height: 120%;
+                background: radial-gradient(circle, 
+                    rgba(255, 0, 110, 0.3) 0%,
+                    rgba(131, 56, 236, 0.2) 30%,
+                    transparent 70%);
+                border-radius: 50%;
+                animation: glowPulse 3s ease-in-out infinite;
+                z-index: -1;
+            }
+    
+            @keyframes glowPulse {
+                0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+                50% { transform: translate(-50%, -50%) scale(1.3); opacity: 0.8; }
+            }
+    
+            /* Líneas decorativas */
+            .title-lines {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 2px;
+                transform: translateY(-50%);
+            }
+    
+            .title-lines::before,
+            .title-lines::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 200px;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, #ff006e, transparent);
+                animation: lineMove 4s ease-in-out infinite;
+            }
+    
+            .title-lines::before {
+                left: -250px;
+            }
+    
+            .title-lines::after {
+                right: -250px;
+                animation-delay: 2s;
+            }
+    
+            @keyframes lineMove {
+                0%, 100% { opacity: 0; transform: translateX(0); }
+                50% { opacity: 1; transform: translateX(50px); }
+            }
+    
+            /* Contenedor de créditos mejorado */
+            .credits-container {
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(20px);
+                border-radius: 30px;
+                padding: 50px;
+                box-shadow: 
+                    0 20px 60px rgba(0, 0, 0, 0.5),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                    0 0 100px rgba(255, 0, 110, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                max-width: 1200px;
+                width: 100%;
+                position: relative;
+                animation: containerFloat 8s ease-in-out infinite;
+            }
+    
+            @keyframes containerFloat {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+    
+            .credits-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 40px;
+                justify-items: center;
+            }
+    
+            .person-card {
+                background: rgba(255, 255, 255, 0.08);
+                border-radius: 25px;
+                padding: 35px;
+                text-align: center;
+                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                width: 100%;
+                max-width: 350px;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .person-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, 
+                    transparent, 
+                    rgba(255, 255, 255, 0.1), 
+                    transparent);
+                transition: left 0.8s ease-in-out;
+            }
+    
+            .person-card:hover::before {
+                left: 100%;
+            }
+    
+            .person-card:hover {
+                transform: translateY(-15px) scale(1.02);
+                box-shadow: 
+                    0 25px 50px rgba(0, 0, 0, 0.3),
+                    0 0 50px rgba(255, 0, 110, 0.2);
+                background: rgba(255, 255, 255, 0.12);
+                border-color: rgba(255, 0, 110, 0.3);
+            }
+    
+            .avatar {
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                margin: 0 auto 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 3.5em;
+                font-weight: bold;
+                color: white;
+                text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+                box-shadow: 
+                    0 15px 35px rgba(0, 0, 0, 0.3),
+                    inset 0 0 0 3px rgba(255, 255, 255, 0.1);
+                transition: all 0.5s ease;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .avatar::before {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -50%;
+                width: 200%;
+                height: 200%;
+                background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+                transform: rotate(45deg);
+                transition: all 0.6s ease;
+                opacity: 0;
+            }
+    
+            .person-card:hover .avatar::before {
+                animation: shimmer 1.5s ease-in-out;
+            }
+    
+            @keyframes shimmer {
+                0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+                50% { opacity: 1; }
+                100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+            }
+    
+            .person-card:nth-child(1) .avatar {
+                background: linear-gradient(135deg, #ff006e, #8338ec);
+            }
+    
+            .person-card:nth-child(2) .avatar {
+                background: linear-gradient(135deg, #3a86ff, #06ffa5);
+            }
+    
+            .person-card:nth-child(3) .avatar {
+                background: linear-gradient(135deg, #ffbe0b, #ff006e);
+            }
+    
+            .person-card:hover .avatar {
+                transform: scale(1.1) rotate(5deg);
+                box-shadow: 
+                    0 20px 40px rgba(0, 0, 0, 0.4),
+                    0 0 50px rgba(255, 0, 110, 0.3);
+            }
+    
+            .name {
+                font-size: 1.6em;
+                font-weight: 600;
+                color: #fff;
+                margin-bottom: 12px;
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+                font-family: 'Orbitron', monospace;
+            }
+    
+            .role {
+                font-size: 1.2em;
+                background: linear-gradient(45deg, #ff006e, #8338ec);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-bottom: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+    
+            .description {
+                font-size: 1em;
+                color: #e0e0e0;
+                line-height: 1.7;
+                text-align: justify;
+                opacity: 0.9;
+            }
+    
+            /* Generar partículas con JavaScript */
+            .footer {
+                margin-top: 60px;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 1em;
+                font-weight: 300;
+            }
+    
+            @media (max-width: 768px) {
+                .credits-container {
+                    padding: 30px 20px;
+                    margin: 20px;
+                }
+                
+                .mega-title {
+                    font-size: clamp(2rem, 10vw, 4rem);
+                    margin-bottom: 40px;
+                }
+                
+                .credits-grid {
+                    gap: 30px;
+                    grid-template-columns: 1fr;
+                }
+                
+                .person-card {
+                    padding: 25px;
+                    max-width: 100%;
+                }
+                
+                .avatar {
+                    width: 120px;
+                    height: 120px;
+                    font-size: 3em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg-animation"></div>
+        <div class="particles" id="particles"></div>
+        
+        <div class="main-container">
+            <div class="title-container">
+                <div class="title-glow"></div>
+                <div class="title-lines"></div>
+                <h1 class="mega-title">CRÉDITOS DEL PROYECTO</h1>
+            </div>
+            
+            <div class="credits-container">
+                <div class="credits-grid">
+                    <div class="person-card">
+                        <div class="avatar">
+                            <img src="img/victor.jpg" alt="Avatar 1" class="avatar-image">
+                        </div>
+                        <div class="person-info">
+                            <h2 class="name">Víctor Fabián Castro Pérez</h2>
+                            <h3 class="role">Profesor de Desarrollo de Ova</h3>
+                            <p class="description">Responsable de la revisión y corrección de los aspectos técnicos y de contenido del OVA.</p>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="avatar">
+                            <img src="img/sami.png" alt="Avatar 2" class="avatar-image">
+                        </div>
+                        <div class="person-info">
+                            <h2 class="name">Andreina Esther Sami Almanza </h2>
+                            <h3 class="role">Desarrolladora de Contenido </h3>
+                            <p class="description">Responsable del diseño y desarrollo del contenido  del OVA. </p>
+                        </div>
+                    </div>
+
+                    <div class="person-card">
+                        <div class="avatar">
+                            <img src="img/cristian.jpeg" alt="Avatar 3" class="avatar-image">
+                        </div>
+                        <div class="person-info">
+                            <h2 class="name">Cristian Miguel Peñata Andrades</h2>
+                            <h3 class="role">Desarrollador del OVA </h3>
+                            <p class="description">Responsable del desarrollo completo de la programación del sitio web del OVA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3 class="footer-title">
+                            <img src="img/Fondobanner .jpeg" alt="Licenciatura en Informática" style="max-width: 80%; height: auto; margin-bottom: 1.5rem; display: block; margin-left: auto; margin-right: auto;">
+                        </h3>
+                        <p style="font-size: 1.1rem; color: #f5f6fa; margin-top: 0.5rem;">Formando profesionales en tecnología e innovación</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3 class="footer-title">Enlaces rápidos</h3>
+                        <ul class="footer-links">
+                            <li class="footer-link"><a href="index.html#inicio">Inicio</a></li>
+                            <li class="footer-link"><a href="index.html#sobre-carrera">Sobre la Carrera</a></li>
+                            <li class="footer-link"><a href="index.html#proyectos">Proyectos</a></li>
+                            <li class="footer-link"><a href="index.html#profesores">Profesores</a></li>
+                            <li class="footer-link"><a href="index.html#malla-curricular">Malla Curricular</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3 class="footer-title">Contacto</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/ziLrpFWCkbrtv1PM8" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Cra. 6 #77-305, Neiva, Montería, Córdoba</a></p>
+                        <p><i class="fas fa-phone"></i> +52 (55) 5622-1234</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:informatica@universidad.edu" style="color:inherit;text-decoration:underline;">informatica@universidad.edu</a></p>
+                    </div>
+                    <div class="footer-section">
+                        <h3 class="footer-title">Síguenos</h3>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1EALqBWGRn/?mibextid=qi2Omg" class="social-link" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/" class="social-link" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/liemav_unicor?igsh=MXA2bnM4c2VscmQ0Yg==" class="social-link" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/school/universidad-de-c%C3%B3rdoba-co-/" class="social-link" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.youtube.com/@unicordobatv" class="social-link" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; © 2025 Licenciatura en Informática | Proyecto del Área de Desarrollo de OVA. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <script>
+            // Crear partículas flotantes
+            function createParticles() {
+                const particlesContainer = document.getElementById('particles');
+                const particleCount = 50;
+    
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 15 + 's';
+                    particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                    
+                    // Colores aleatorios para las partículas
+                    const colors = ['#ff006e', '#8338ec', '#3a86ff', '#06ffa5', '#ffbe0b'];
+                    particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    particle.style.boxShadow = `0 0 10px ${colors[Math.floor(Math.random() * colors.length)]}`;
+                    
+                    particlesContainer.appendChild(particle);
+                }
+            }
+    
+            // Efecto de cursor brillante
+            document.addEventListener('mousemove', (e) => {
+                const cursor = document.createElement('div');
+                cursor.style.position = 'fixed';
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                cursor.style.width = '4px';
+                cursor.style.height = '4px';
+                cursor.style.background = '#ff006e';
+                cursor.style.borderRadius = '50%';
+                cursor.style.pointerEvents = 'none';
+                cursor.style.zIndex = '9999';
+                cursor.style.boxShadow = '0 0 20px #ff006e';
+                cursor.style.animation = 'cursorFade 1s ease-out forwards';
+                
+                document.body.appendChild(cursor);
+                
+                setTimeout(() => cursor.remove(), 1000);
+            });
+    
+            // CSS para animación del cursor
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes cursorFade {
+                    0% { opacity: 1; transform: scale(1); }
+                    100% { opacity: 0; transform: scale(0); }
+                }
+            `;
+            document.head.appendChild(style);
+    
+            // Inicializar efectos
+            createParticles();
+        </script>
+    </body>
+    </html>
+</body>
+</html>
