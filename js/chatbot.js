@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function() {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
-    // Llama a Gemini a través del backend en Python y devuelve la respuesta
+    // Llama a Gemini a través del backend en Render y devuelve la respuesta
     async function getGeminiResponse(userMessage) {
-        const response = await fetch("http://localhost:5000/api/gemini", {
+        const response = await fetch("https://licenciatura-informatica.onrender.com/api/gemini", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ message: userMessage })
