@@ -85,8 +85,24 @@ document.addEventListener('DOMContentLoaded', function() {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 
+    // Llama a Gemini a través del backend en Python y devuelve la respuesta
+    async function getGeminiResponse(userMessage) {
+        const response = await fetch("http://localhost:5000/api/gemini", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userMessage })
+        });
+
+        if (!response.ok) {
+            throw new Error("Error al contactar a Gemini (backend)");
+        }
+
+        const data = await response.json();
+        return data.reply || "No se recibió respuesta del backend.";
+    }
+
     // Función para enviar mensaje
-    function sendMessage() {
+    async function sendMessage() {
         const message = chatInput.value.trim();
         if (message) {
             // Mostrar mensaje del usuario
@@ -102,46 +118,24 @@ document.addEventListener('DOMContentLoaded', function() {
             // Limpiar input
             chatInput.value = '';
 
-            // Mostrar respuesta del bot
-            setTimeout(() => {
-                const botResponse = getBotResponse(message);
-                const botMessage = document.createElement('div');
-                botMessage.className = 'message bot-message';
-                botMessage.innerHTML = `
-                    <div class="message-content">
-                        <p>${botResponse}</p>
-                    </div>
-                `;
-                chatMessages.appendChild(botMessage);
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 500);
-        }
-    }
+            // Mostrar respuesta del bot (Pensando...)
+            const botMessage = document.createElement('div');
+            botMessage.className = 'message bot-message';
+            botMessage.innerHTML = `
+                <div class="message-content">
+                    <p>Pensando...</p>
+                </div>
+            `;
+            chatMessages.appendChild(botMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    // Función para obtener respuesta del bot
-    function getBotResponse(message) {
-        const lowerMessage = message.toLowerCase();
-        
-        if (lowerMessage.includes('hola') || lowerMessage.includes('buenos días') || lowerMessage.includes('buenas')) {
-            return '¡Hola! ¿En qué puedo ayudarte hoy? Puedes seleccionar una de las preguntas frecuentes o escribir tu consulta.';
-        }
-        else if (lowerMessage.includes('horario') || lowerMessage.includes('clases')) {
-            return 'Las clases se imparten de lunes a viernes en horario matutino y vespertino. ¿Te gustaría conocer más detalles sobre algún horario específico?';
-        }
-        else if (lowerMessage.includes('inscripción') || lowerMessage.includes('inscribir')) {
-            return 'El proceso de inscripción se realiza a través de la plataforma de la universidad. ¿Necesitas ayuda con algún paso específico?';
-        }
-        else if (lowerMessage.includes('costo') || lowerMessage.includes('precio') || lowerMessage.includes('pago')) {
-            return 'La carrera tiene un costo por semestre que incluye matrícula y colegiatura. ¿Te gustaría conocer los detalles específicos?';
-        }
-        else if (lowerMessage.includes('gracias')) {
-            return '¡De nada! ¿Hay algo más en lo que pueda ayudarte?';
-        }
-        else if (lowerMessage.includes('adiós') || lowerMessage.includes('chao') || lowerMessage.includes('hasta luego')) {
-            return '¡Hasta luego! Que tengas un excelente día.';
-        }
-        else {
-            return 'Lo siento, no entiendo tu pregunta. ¿Podrías seleccionar una de las preguntas frecuentes o reformular tu consulta?';
+            try {
+                const geminiReply = await getGeminiResponse(message);
+                botMessage.querySelector('.message-content p').textContent = geminiReply;
+            } catch (e) {
+                botMessage.querySelector('.message-content p').textContent = "Ocurrió un error al contactar a Gemini.";
+            }
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
     }
 
